@@ -209,9 +209,10 @@ a:hover {
 .quotes {
   display: block;
   width: 25%;
+  height: 500px;
   float: left;
   text-align: center;
-  padding: 3.75rem 2.5rem 6.8rem; 
+  padding: 2rem 2.5rem 2rem; 
   background-image: linear-gradient(rgba(255,0,125,0.5), rgba(255,0,125,0.5)), url("../images/quote_img.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -402,6 +403,10 @@ footer {
   .resp-container {
     padding-top: 56.25%;
     width: 100%;
+  }
+
+  .quotes {
+    height: 300px;
   }
 
   .quote {
