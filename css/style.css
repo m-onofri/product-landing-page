@@ -48,6 +48,7 @@ a:hover {
 #header {
   background-color: #fff;
   padding: 0.5rem 1rem 0.25rem;
+  position: relative;
 }
 
 #nav-bar {
@@ -65,6 +66,37 @@ a:hover {
 .logo {
   width: 112px;
   height: 63px;
+}
+
+.menu_icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.bar {
+  width: 40px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  transition: 0.4s;
+}
+
+.change .bar2 {
+  transform: rotate(-60deg) translate(2px, 9px);
+}
+
+.change .bar3 {
+  transform: rotate(60deg) translate(-14px, 4px) ;
+}
+
+.menu_icon.show {
+  display: none;
 }
 
 /***Hero image***/
@@ -335,19 +367,26 @@ footer {
 }
 
 @media only screen and (max-width : 650px) {
-  #header {
+  #header.extend {
     padding-bottom: 11rem;
   }
 
   .logo {
     display: block;
-    margin: auto;
+  }
+
+  .menu_icon.show {
+    display: block;
   }
 
   #nav-bar {
     width: 100%;
     flex-direction: column;
     text-align: center;
+  }
+
+  #nav-bar.hide {
+    display: none;
   }
 
   .big {
@@ -394,7 +433,8 @@ footer {
 @media only screen and (max-width : 500px) {
   html {
   font-size: 18px;
-}
+  }
+
 }
 
 
